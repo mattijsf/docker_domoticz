@@ -28,7 +28,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 RUN apk add --no-cache git \
 	 git \
 	 bash \
-	 libssl1.0 openssl-dev \
+	 libssl1.0 libressl-dev \
 	 build-base cmake \
 	 boost-dev \
 	 boost-thread \
