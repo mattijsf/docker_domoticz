@@ -35,6 +35,7 @@ RUN apk add --no-cache git \
 	 boost-system \
 	 boost-date_time \
 	 sqlite sqlite-dev \
+	 python3-dev \
 	 curl libcurl curl-dev \
 	 libusb libusb-dev \
 	 coreutils \
@@ -52,7 +53,7 @@ RUN apk add --no-cache git \
 	 make && \
 	 rm -rf /src/domoticz/.git && \
 	 rm -rf /src/open-zwave/.git && \
-	 apk del git cmake linux-headers libusb-dev zlib-dev libressl-dev boost-dev sqlite-dev build-base eudev-dev coreutils curl-dev
+	 apk del git cmake linux-headers libusb-dev zlib-dev libressl-dev boost-dev sqlite-dev python3-dev build-base eudev-dev coreutils curl-dev
 
 VOLUME /config
 
