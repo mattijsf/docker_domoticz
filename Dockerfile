@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM easypi/alpine-arm:latest
 MAINTAINER Sylvain Desbureaux <sylvain@desbureaux.fr>
 
 # install packages &
@@ -28,7 +28,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 RUN apk add --no-cache git \
 	 git \
 	 bash \
-	 libssl1.0 libressl-dev \
+	 libssl1.0 openssl-dev \
 	 build-base cmake \
 	 boost-dev \
 	 boost-thread \
@@ -53,7 +53,7 @@ RUN apk add --no-cache git \
 	 make && \
 	 rm -rf /src/domoticz/.git && \
 	 rm -rf /src/open-zwave/.git && \
-	 apk del git cmake linux-headers libusb-dev zlib-dev libressl-dev boost-dev sqlite-dev python3-dev build-base eudev-dev coreutils curl-dev
+	 apk del git cmake linux-headers libusb-dev zlib-dev openssl-dev boost-dev sqlite-dev python3-dev build-base eudev-dev coreutils curl-dev
 
 VOLUME /config
 
